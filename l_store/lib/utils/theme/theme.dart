@@ -10,8 +10,8 @@ import 'package:l_store/utils/theme/widget_themes/text_theme.dart';
 
 import '../constants/colors.dart';
 
-class TAppTheme {
-  TAppTheme._();
+class LAppTheme {
+  LAppTheme._();
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
