@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:l_store/features/Authentication/screens/onboarding/login/login.dart';
+import 'package:l_store/features/Authentication/screens/login/login.dart';
 
 class OnboardingController extends GetxController{
   static OnboardingController get instance => Get.find();

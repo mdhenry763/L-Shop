@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:l_store/common/widgets/login_signup/success/success_screen.dart';
-import 'package:l_store/features/Authentication/screens/onboarding/login/login.dart';
+import 'package:l_store/features/Authentication/screens/login/login.dart';
 import 'package:l_store/utils/constants/image_strings.dart';
 import 'package:l_store/utils/constants/sizes.dart';
 import 'package:l_store/utils/constants/text_strings.dart';
