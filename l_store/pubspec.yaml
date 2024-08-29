@@ -30,6 +30,7 @@ dependencies:
   # State Management
   get: ^4.6.6
   get_storage: ^2.1.1
+  carousel_slider: ^5.0.0
 
 #---------- PACKAGES END -----------#
 

@@ -15,9 +15,10 @@ class TPrimaryHeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return TCurvedEdgesWidget(
       child: Container(
-          color: TColors.primary,
-          padding: const EdgeInsets.all(0),
-          child: Builder(builder: (context) {
+        color: TColors.primary,
+        padding: const EdgeInsets.all(0),
+        child: Builder(
+          builder: (context) {
             return SizedBox(
               height: 400,
               child: Stack(
@@ -32,10 +33,13 @@ class TPrimaryHeaderContainer extends StatelessWidget {
                       right: -300,
                       child: TCircularContainer(
                           backgroundColor: TColors.textWhite.withOpacity(0.1))),
+                  child
                 ],
               ),
             );
-          })),
+          },
+        ),
+      ),
     );
   }
 }
