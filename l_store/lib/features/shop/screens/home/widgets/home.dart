@@ -1,12 +1,12 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:l_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:l_store/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:l_store/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:l_store/common/widgets/images/rounded_images.dart';
+import 'package:l_store/common/widgets/layouts/grid_layout.dart';
+import 'package:l_store/common/widgets/products/prodcut_cards/product_card_vertical.dart';
 import 'package:l_store/common/widgets/text/section_heading.dart';
 import 'package:l_store/features/shop/screens/home/widgets/home_categories.dart';
-import 'package:l_store/features/shop/screens/home_appbar.dart';
+import 'package:l_store/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:l_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:l_store/utils/constants/image_strings.dart';
 import 'package:l_store/utils/constants/sizes.dart';
 
@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -64,35 +64,16 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  CarouselSlider(
-                    options: CarouselOptions(
-                      viewportFraction: 1,
-                    ),
-                    items: const [
-                      TRoundedImage(
-                        imageUrl: TImages.promoBanner1,
-                      ),
-                      TRoundedImage(
-                        imageUrl: TImages.promoBanner2,
-                      ),
-                      TRoundedImage(
-                        imageUrl: TImages.promoBanner3,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: TSizes.spaceBtwItems,
-                  ),
-                  Row(
-                    children: [
-                      for(int i = 0; i < 3; i++)
-                      const TCircularContainer(
-                        height: 20,
-                        width: 20,
-                        backgroundColor: Colors.green,
-                      ),
-                    ],
-                  )
+                  // Promo Slider
+                  const TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
+                  const SizedBox(height: TSizes.spaceBtwSections,),
+                  
+                  //Heading
+                  TSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  const SizedBox(height: TSizes.spaceBtwItems),
+
+                  // Popular products
+                  TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical())
                 ],
               ),
             )
@@ -102,3 +83,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
