@@ -20,7 +20,7 @@ class ResetPassword extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
           children: [
             //Image

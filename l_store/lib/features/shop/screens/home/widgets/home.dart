@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:l_store/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:l_store/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:l_store/common/widgets/layouts/grid_layout.dart';
-import 'package:l_store/common/widgets/products/prodcut_cards/product_card_vertical.dart';
+import 'package:l_store/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:l_store/common/widgets/text/section_heading.dart';
 import 'package:l_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:l_store/features/shop/screens/home/widgets/promo_slider.dart';
@@ -55,6 +55,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: TSizes.spaceBtwSections)
                 ],
               ),
             ),
