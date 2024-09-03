@@ -3,7 +3,8 @@ import 'package:l_store/common/widgets/custom_shapes/curved_widgets/curved_edges
 
 class TCurvedEdgesWidget extends StatelessWidget {
   const TCurvedEdgesWidget({
-    super.key, this.child,
+    super.key, 
+    required this.child,
   });
 
 final Widget? child;
