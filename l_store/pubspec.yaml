@@ -34,6 +34,8 @@ dependencies:
 
   #Product Specific
   readmore: ^3.0.0
+  flutter_pannable_rating_bar: ^2.7.2+1
+  flutter_rating_bar: ^4.0.1
 
 #---------- PACKAGES END -----------#
 
