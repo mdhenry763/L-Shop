@@ -63,12 +63,13 @@ class TProductCardVertical extends StatelessWidget {
 
                   //Favorite Icons button
                   const Positioned(
-                      top: 0,
-                      right: 0,
-                      child: TCircularIcon(
-                        icon: Iconsax.heart5,
-                        color: Colors.red,
-                      ))
+                    top: 0,
+                    right: 0,
+                    child: TCircularIcon(
+                      icon: Iconsax.heart5,
+                      color: Colors.red,
+                    ),
+                  ),
                 ],
               ),
             ),
