@@ -29,7 +29,7 @@ class TProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
             boxShadow: [TShadowStyle.verticalProductShadow],
             borderRadius: BorderRadius.circular(TSizes.productImageRadius),
-            color: dark ? TColors.darkerGrey: TColors.white),
+            color: dark ? TColors.darkerGrey : TColors.white),
         child: Column(
           children: [
             //Thumbnail, Wishlist Button, Discount Tag
@@ -72,13 +72,11 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: TSizes.spaceBtwItems / 2,
-            ),
+            const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             //Details
             const Padding(
-              padding: EdgeInsets.only(left: TSizes.sm),
+              padding: EdgeInsets.only(left: 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

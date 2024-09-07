@@ -5,7 +5,7 @@ import 'package:l_store/common/widgets/appbar/appbar.dart';
 import 'package:l_store/common/widgets/icons/circular_icon.dart';
 import 'package:l_store/common/widgets/layouts/grid_layout.dart';
 import 'package:l_store/common/widgets/products/product_cards/product_card_vertical.dart';
-import 'package:l_store/features/shop/screens/home/widgets/home.dart';
+import 'package:l_store/features/shop/screens/home/home.dart';
 import 'package:l_store/utils/constants/sizes.dart';
 
 class FavouriteScreen extends StatelessWidget {
