@@ -31,6 +31,7 @@ class TProductCardVertical extends StatelessWidget {
             borderRadius: BorderRadius.circular(TSizes.productImageRadius),
             color: dark ? TColors.darkerGrey : TColors.white),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Thumbnail, Wishlist Button, Discount Tag
             TRoundedContainer(
@@ -77,7 +78,7 @@ class TProductCardVertical extends StatelessWidget {
 
             //Details
             const Padding(
-              padding: EdgeInsets.only(left: 0),
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
