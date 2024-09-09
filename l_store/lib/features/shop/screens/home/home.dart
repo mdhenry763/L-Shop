@@ -11,6 +11,9 @@ import 'package:l_store/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:l_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:l_store/utils/constants/image_strings.dart';
 import 'package:l_store/utils/constants/sizes.dart';
+import 'package:l_store/utils/helpers/dummy_data.dart';
+
+final List<String> images = DummyData().images;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -76,7 +79,9 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   // Popular products
-                  TGridLayout(itemCount: 4, itemBuilder: (_, index) => const TProductCardVertical())
+                  TGridLayout(itemCount: 4, itemBuilder: (_, index) => TProductCardVertical(
+                    imageUrl: images[index],
+                  ))
                 ],
               ),
             )

@@ -3,6 +3,9 @@ import 'package:iconsax/iconsax.dart';
 import 'package:l_store/common/widgets/layouts/grid_layout.dart';
 import 'package:l_store/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:l_store/utils/constants/sizes.dart';
+import 'package:l_store/utils/helpers/dummy_data.dart';
+
+final List<String> images = DummyData().images;
 
 class TSortableProducts extends StatelessWidget {
   const TSortableProducts({
@@ -24,7 +27,9 @@ class TSortableProducts extends StatelessWidget {
         ),
     
         const SizedBox(height: TSizes.spaceBtwSections),
-        TGridLayout(itemCount: 8, itemBuilder: (_, index) => const TProductCardVertical())
+        TGridLayout(itemCount: 8, itemBuilder: (_, index) => TProductCardVertical(
+          imageUrl: images[index],
+        ))
       ],
     );
   }

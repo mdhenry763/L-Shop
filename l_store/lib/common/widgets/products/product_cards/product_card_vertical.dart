@@ -15,7 +15,15 @@ import 'package:l_store/utils/constants/sizes.dart';
 import 'package:l_store/utils/helpers/helper_functions.dart';
 
 class TProductCardVertical extends StatelessWidget {
-  const TProductCardVertical({super.key});
+  const TProductCardVertical({
+    super.key,
+    this.imageUrl = TImages.productImage1,
+    this.brand = 'Nike',
+    this.title = 'Description of product'
+    
+    });
+
+    final String imageUrl, brand, title;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +49,8 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   //Thumbnail Image
-                  const TRoundedImage(
-                    imageUrl: TImages.productImage1,
+                  TRoundedImage(
+                    imageUrl: imageUrl,
                     applyImageRadius: true,
                   ),
 
@@ -77,17 +85,17 @@ class TProductCardVertical extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             //Details
-            const Padding(
-              padding: EdgeInsets.only(left: TSizes.sm),
+            Padding(
+              padding: const EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TProductTitleText(
-                    title: 'Green mike Air shoes',
+                    title: title,
                     smallSize: true,
                   ),
-                  SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleWithVerifiedIcon(title: 'Nike')
+                  const SizedBox(height: TSizes.spaceBtwItems / 2),
+                  TBrandTitleWithVerifiedIcon(title: brand)
                 ],
               ),
             ),

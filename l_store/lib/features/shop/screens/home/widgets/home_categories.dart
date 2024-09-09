@@ -11,16 +11,41 @@ class THomeCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //List of different icons
+    final List<String> images = [
+      TImages.sportIcon,
+      TImages.cosmeticsIcon,
+      TImages.shoeIcon,
+      TImages.toyIcon,
+      TImages.jeweleryIcon,
+      TImages.furnitureIcon,
+      TImages.animalIcon,
+      TImages.electronicsIcon,
+      TImages.clothIcon,
+    ];
+
+    final List<String> names = [
+      'Sport',
+      'Cosmetics',
+      'Shoe',
+      'Toys',
+      'Jewelry',
+      'Furniture',
+      'Pets',
+      'Electronics',
+      'Clothing',
+    ];
+
     return SizedBox(
       height: 80,
       child: ListView.builder(
           shrinkWrap: true,
-          itemCount: 6,
+          itemCount: images.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, index) {
             return TVerticalImageText(
-              image: TImages.sportIcon,
-              title: 'Shoe',
+              image: images[index],
+              title: names[index],
               onTap: () => Get.to(() => const SubCategoriesScreen()),
             );
           }),
