@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:l_store/common/brands/cards/brand_card.dart';
 import 'package:l_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:l_store/utils/constants/colors.dart';
+import 'package:l_store/utils/constants/image_strings.dart';
 import 'package:l_store/utils/constants/sizes.dart';
 import 'package:l_store/utils/helpers/helper_functions.dart';
 
@@ -20,8 +21,8 @@ class TBrandShowcase extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Column(
         children: [
-          //Brands with prodcuts count
-          const TBrandCard(showborder: false),
+          //Brands with products count
+          const TBrandCard(showborder: false, imageUrl: TImages.nikeLogo,),
           const SizedBox(height: TSizes.spaceBtwItems,),
           //Brand with top & product iages
           Row(

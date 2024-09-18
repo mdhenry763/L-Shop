@@ -8,9 +8,11 @@ import 'package:l_store/common/widgets/layouts/grid_layout.dart';
 import 'package:l_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:l_store/common/widgets/text/section_heading.dart';
 import 'package:l_store/features/shop/screens/all_brands/all_brands.dart';
+import 'package:l_store/features/shop/screens/cart/cart.dart';
 import 'package:l_store/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:l_store/utils/constants/colors.dart';
 import 'package:l_store/utils/constants/sizes.dart';
+import 'package:l_store/utils/helpers/dummy_data.dart';
 import 'package:l_store/utils/helpers/helper_functions.dart';
 
 class StoreScreen extends StatelessWidget {
@@ -28,7 +30,7 @@ class StoreScreen extends StatelessWidget {
           ),
           actions: [
             TCartCounterIcon(
-              onPressed: () {},
+              onPressed: () => Get.to(() => const CartScreen()),
             )
           ],
         ),
@@ -76,7 +78,9 @@ class StoreScreen extends StatelessWidget {
                         itemCount: 4,
                         mainAxisExtent: 80,
                         itemBuilder: (_, index) {
-                          return const TBrandCard(
+                          return TBrandCard(
+                            imageUrl: DummyData().brands[index],
+                            title: DummyData().brandNames[index],
                             showborder: true,
                           );
                         },

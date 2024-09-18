@@ -5,6 +5,7 @@ import 'package:l_store/common/widgets/products/product_cards/product_card_verti
 import 'package:l_store/common/widgets/text/section_heading.dart';
 import 'package:l_store/utils/constants/image_strings.dart';
 import 'package:l_store/utils/constants/sizes.dart';
+import 'package:l_store/utils/helpers/dummy_data.dart';
 
 class TCategoryTab extends StatelessWidget {
   const TCategoryTab({super.key});
@@ -37,7 +38,9 @@ class TCategoryTab extends StatelessWidget {
 
               TGridLayout(
                   itemCount: 4,
-                  itemBuilder: (_, index) => const TProductCardVertical()),
+                  itemBuilder: (_, index) => TProductCardVertical(
+                    imageUrl: DummyData().images[index],
+                  )),
               const SizedBox(height: TSizes.spaceBtwItems),
             ],
           ),

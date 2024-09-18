@@ -12,7 +12,12 @@ import 'package:l_store/utils/constants/sizes.dart';
 import 'package:l_store/utils/helpers/helper_functions.dart';
 
 class TProductCardHorizontal extends StatelessWidget {
-  const TProductCardHorizontal({super.key});
+  const TProductCardHorizontal({
+    super.key,
+    this.imageUrl = TImages.productImage1,
+    });
+
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +39,11 @@ class TProductCardHorizontal extends StatelessWidget {
             child: Stack(
               children: [
                 //Thumbail image
-                const SizedBox(
+                SizedBox(
                   width: 120,
                   height: 120,
                   child: TRoundedImage(
-                      imageUrl: TImages.productImage1, applyImageRadius: true),
+                      imageUrl: imageUrl, applyImageRadius: true),
                 ),
 
                 //Sale Tag
@@ -81,13 +86,13 @@ class TProductCardHorizontal extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TProductTitleText(
-                          title: 'Green Nike Half SLeeves shirt',
+                          title: 'Product description will go here',
                           smallSize: true),
                       SizedBox(height: TSizes.spaceBtwItems / 2),
                       TBrandTitleWithVerifiedIcon(title: 'Nike'),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

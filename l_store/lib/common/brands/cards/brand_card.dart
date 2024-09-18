@@ -10,9 +10,10 @@ import 'package:l_store/utils/helpers/helper_functions.dart';
 
 class TBrandCard extends StatelessWidget {
   const TBrandCard({
-    super.key, required this.showborder, this.onTap,
+    super.key, required this.showborder, this.onTap, this.imageUrl = TImages.clothIcon, this.title = 'Nike'
   });
 
+  final String imageUrl, title; 
   final bool showborder;
   final void Function()? onTap;
 
@@ -31,7 +32,7 @@ class TBrandCard extends StatelessWidget {
             Flexible(
               child: TCircularImage(
                 isNetworkImage: false,
-                image: TImages.clothIcon,
+                image: imageUrl,
                 backgroundColor: Colors.transparent,
                 overlayColor:
                     isDark
@@ -50,8 +51,8 @@ class TBrandCard extends StatelessWidget {
                 crossAxisAlignment:
                     CrossAxisAlignment.start,
                 children: [
-                  const TBrandTitleWithVerifiedIcon(
-                    title: 'Nike',
+                  TBrandTitleWithVerifiedIcon(
+                    title: title,
                     brandTextSize: TextSizes.large,
                   ),
                   Text(

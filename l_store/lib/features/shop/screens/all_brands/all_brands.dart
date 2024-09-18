@@ -6,6 +6,7 @@ import 'package:l_store/common/widgets/layouts/grid_layout.dart';
 import 'package:l_store/common/widgets/text/section_heading.dart';
 import 'package:l_store/features/shop/screens/all_brands/brand_products.dart';
 import 'package:l_store/utils/constants/sizes.dart';
+import 'package:l_store/utils/helpers/dummy_data.dart';
 
 class AllBrands extends StatelessWidget {
   const AllBrands({super.key});
@@ -31,9 +32,11 @@ class AllBrands extends StatelessWidget {
 
                 //Brands
                 TGridLayout(
-                  itemCount: 10,
+                  itemCount: 6,
                   mainAxisExtent: 80,
                   itemBuilder: (context, index) => TBrandCard(
+                    title: DummyData().brandNames[index],
+                    imageUrl: DummyData().brands[index],
                     showborder: true,
                     onTap: () => Get.to(
                       () => const BrandProducts(),

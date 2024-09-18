@@ -7,6 +7,10 @@ import 'package:l_store/common/widgets/layouts/grid_layout.dart';
 import 'package:l_store/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:l_store/features/shop/screens/home/home.dart';
 import 'package:l_store/utils/constants/sizes.dart';
+import 'package:l_store/utils/helpers/dummy_data.dart';
+
+final List<String> images = DummyData().images;
+
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
@@ -29,7 +33,9 @@ class FavouriteScreen extends StatelessWidget {
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              TGridLayout(itemCount: 6, itemBuilder: (_, index) => const TProductCardVertical())
+              TGridLayout(itemCount: 6, itemBuilder: (_, index) => TProductCardVertical(
+                imageUrl: images[index],
+              ))
             ],
           ),
         ),

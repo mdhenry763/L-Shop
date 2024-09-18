@@ -37,6 +37,9 @@ dependencies:
   flutter_pannable_rating_bar: ^2.7.2+1
   flutter_rating_bar: ^4.0.1
 
+  #Firebase
+  firebase_core: ^3.5.0
+
 #---------- PACKAGES END -----------#
 
 

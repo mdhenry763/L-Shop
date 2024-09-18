@@ -44,14 +44,17 @@ class TProductCardVertical extends StatelessWidget {
             //Thumbnail, Wishlist Button, Discount Tag
             TRoundedContainer(
               height: 180,
+              width: double.infinity,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
                   //Thumbnail Image
-                  TRoundedImage(
-                    imageUrl: imageUrl,
-                    applyImageRadius: true,
+                  Center(
+                    child: TRoundedImage(
+                      imageUrl: imageUrl,
+                      applyImageRadius: true,
+                    ),
                   ),
 
                   //Sale Tag

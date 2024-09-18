@@ -5,6 +5,7 @@ import 'package:l_store/common/widgets/products/product_cards/product_card_horiz
 import 'package:l_store/common/widgets/text/section_heading.dart';
 import 'package:l_store/utils/constants/image_strings.dart';
 import 'package:l_store/utils/constants/sizes.dart';
+import 'package:l_store/utils/helpers/dummy_data.dart';
 
 class SubCategoriesScreen extends StatelessWidget {
   const SubCategoriesScreen({super.key});
@@ -27,7 +28,7 @@ class SubCategoriesScreen extends StatelessWidget {
                   imageUrl: TImages.promoBanner1,
                   applyImageRadius: true),
               const SizedBox(height: TSizes.spaceBtwSections),
-          
+
               //Sub Categories
               Column(
                 children: [
@@ -43,9 +44,11 @@ class SubCategoriesScreen extends StatelessWidget {
                     child: ListView.separated(
                       itemCount: 4,
                       scrollDirection: Axis.horizontal,
-                      separatorBuilder: (context, index) => const SizedBox(width: TSizes.spaceBtwItems),
-                      itemBuilder: (context, index) =>
-                          const TProductCardHorizontal(),
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(width: TSizes.spaceBtwItems),
+                      itemBuilder: (context, index) => TProductCardHorizontal(
+                        imageUrl: DummyData().images[index],
+                      ),
                     ),
                   ),
                 ],
